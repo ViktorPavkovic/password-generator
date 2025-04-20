@@ -1,0 +1,5 @@
+# Terraform
+infrastructure/.terraform/**
+infrastructure/builds/**
+infrastructure/.terraform.lock.hcl
+infrastructure/*.tfvars
