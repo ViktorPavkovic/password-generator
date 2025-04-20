@@ -10,7 +10,7 @@ ndpFQ8nW-b6n5hHJb-WW806O7G-biHs6dDe
 
 ## Features
 
-The service is very usefull as self-hosted function that will cost you nothing for day-to-day usage. It will generate passwords using predictable format and (optionally) save them for a short period of time in DynamoDB in case you used it and forgot to save it.
+The service is very useful as self-hosted function that will cost you nothing for day-to-day usage. It will generate passwords using predictable format and (optionally) save them for a short period of time in DynamoDB in case you used it and forgot to save it.
 
 DynamoDB does not have backups enabled and the default TTL is 1h, so make sure to quickly retrieve it in case it got lost. For more details about TTL in DynamoDB, see the [official documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html). This integration is optional and can be controlled via `lambda_var_save_to_ddb` variable.
 
@@ -96,7 +96,7 @@ Using a remote state in S3 is recommended, refer to `infrastructure/_provider.tf
 
 
 ## Cost
-The entire infrastructure is within AWS Free Tier, but costs may be incurred if usage exceeds the free tier limits or is otherwise unexpectedly high. In an average scenario cold Lambda will executre in ~400 ms, while hot will take ~40 ms.
+The entire infrastructure is within AWS Free Tier, but costs may be incurred if usage exceeds the free tier limits or is otherwise unexpectedly high. In an average scenario cold Lambda will execute in ~400 ms, while hot will take ~40 ms.
 
 To get more understanding of costs visit AWS pricing pages for [Lambda](https://aws.amazon.com/lambda/pricing/), [DynamoDB](https://aws.amazon.com/dynamodb/pricing/), and [CloudWatch](https://aws.amazon.com/cloudwatch/pricing/).
 
