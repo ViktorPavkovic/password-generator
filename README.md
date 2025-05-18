@@ -73,7 +73,11 @@ AWS Lambda has function URL defined using AWS IAM authorization. It can be invok
 ```bash
 awscurl --region <aws-region> --service lambda https://<lambda-url>
 ```
-Once Terraform is applied, custom alias will be generated that you can use with your local shell.
+Once Terraform is applied, custom alias will be generated that you can use with your local shell. To make your life easier, you can also pipe the output of above command to clipboard tool such as pbcopy, xsel or xclip. An example for `pbcopy` that will work on newer OS X versions:
+```bash
+alias pwdgen='awscurl --region <aws-region> --service lambda https://<lambda-url> | tee >(pbcopy)'
+```
+This will output your newly generated password in the terminal and copy it to your clipboard, ready to be used wherever you need it.
 
 ## Infrastructure
 
